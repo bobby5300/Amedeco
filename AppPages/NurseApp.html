@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Socket.IO chat</title>    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    
+  </head>
+  <body>Hello world
+
+      <span id="CurrentLocation" style="display:none;"></span>
+    
+    <script>
+      var GetLat=null;      
+function getLocation() {
+    if (navigator.geolocation) {      
+        navigator.geolocation.getCurrentPosition(showPosition);        
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {    
+    $("#CurrentLocation").text(position.coords.latitude + ',' + position.coords.longitude);
+    console.log(position.coords.latitude + ',' + position.coords.longitude);   
+}
+
+
+$(function(){
+  getLocation();
+  var socket = io.connect();   
+    setInterval(function() {
+        socket.emit('clientEvent',$("#CurrentLocation").text());
+    }, 3000);
+});
+
+
+      </script>
+  </body>
+</html>
