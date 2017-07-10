@@ -1,4 +1,15 @@
-  "lockfileVersion": 1,
+{
+	  "name": "application-name",
+	  "version": "2.0.0",
+	  "private": true,
+	  "scripts": {
+		"start": "node App"
+	},  
+	"license": "Apache",
+	"engines": {
+		"node": "~0.10.0 || ~4.2.0"
+	  }, 
+"lockfileVersion": 1,
   "dependencies": {
     "abbrev": {
       "version": "1.1.0",
