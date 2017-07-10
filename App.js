@@ -27,7 +27,7 @@ mongoose.connect('mongodb://VsoftDemo:vsoft1234@ds145952.mlab.com:45952/amadeco'
 var sess;
 
 app.get('/', function(req, res){ 
-    'use strict';
+     console.log("hello");
     res.render('Home.html');  
 });
 
