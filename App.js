@@ -1,4 +1,3 @@
-"use strict";
 var http = require('http').Server(app);
 var fs = require('fs');
 var express    = require('express');
