@@ -1,4 +1,3 @@
-'use strict';
 var http = require('http').Server(app);
 var fs = require('fs');
 var express    = require('express');
@@ -26,8 +25,7 @@ app.set('view engine', 'html');
 mongoose.connect('mongodb://VsoftDemo:vsoft1234@ds145952.mlab.com:45952/amadeco');
 var sess;
 
-app.get('/', function(req, res){ 
-     'use strict';
+app.get('/', function(req, res){    
     res.render('Home.html');  
 });
 
