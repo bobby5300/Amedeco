@@ -167,7 +167,7 @@ app.post('/NurseRegister', function(req, res) {
 
 });
 
-let db=mongoose.connection;
+var db=mongoose.connection;
 
 //Check connection
 db.once('open',function(){
