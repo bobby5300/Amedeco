@@ -233,6 +233,6 @@ app.post('/AddFamilyDetails', function(req, res) {
 });
 
 
-app.listen(5300);
+app.listen(8080);
  
-console.log('Server Started listening on 5300');
+console.log('Server Started listening on 8080');
