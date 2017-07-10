@@ -14,7 +14,7 @@ var Family = require('./Family');
 var io = require('socket.io')(http);
 var Pug = require('pug');
 var io = require('socket.io-client');
-ioClient = io.connect('http://localhost:8000');
+//ioClient = io.connect('http://localhost:8000');
 app.use(session({secret: 'ssshhhhh'}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
